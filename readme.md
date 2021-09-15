@@ -1,2 +1,2 @@
-# Specify your number intervall, then guess what number the computer has chosen!
+# Specify your number interval, then guess what number the computer has chosen!
 
