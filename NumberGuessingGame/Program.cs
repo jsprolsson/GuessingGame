@@ -12,7 +12,7 @@ namespace NumberGuessingGame
             string answer = Console.ReadLine();
             answer.ToUpper();
 
-            switch (answer)                                                     //Meny
+            switch (answer)                                                     
             {
                 case "Y":
                     Game guessingGame = new Game();
@@ -33,7 +33,6 @@ namespace NumberGuessingGame
         {
             bool isCorrect = false;
             List<int> guessedNumbers = new List<int>();
-            Random randomNumber = new Random();
             int mainRandomNumber = GetRandomNumbers();
 
             public void PlayGame()
