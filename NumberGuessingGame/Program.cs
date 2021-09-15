@@ -91,8 +91,6 @@ namespace NumberGuessingGame
 
             int randomNumber = random.Next(interval[0], interval[1]);
 
-            Console.WriteLine(randomNumber);
-
             return randomNumber;
 
 
