@@ -10,9 +10,9 @@ namespace NumberGuessingGame
 
             Console.Write("Hey! Want to play a game? Y/N ");
             string answer = Console.ReadLine();
-            answer.ToUpper();
+            string answerUpper = answer.ToUpper();
 
-            switch (answer)                                                     
+            switch (answerUpper)                                                     
             {
                 case "Y":
                     Game guessingGame = new Game();
@@ -25,8 +25,6 @@ namespace NumberGuessingGame
                     Console.WriteLine("Invalid input.");
                     break;
             }
-
-
         }
 
         class Game
@@ -37,9 +35,10 @@ namespace NumberGuessingGame
 
             public void PlayGame()
             {
+                
                 do
                 {
-                    Console.WriteLine("Guess a number: ");
+                    Console.WriteLine(guessedNumbers.Count == 0 ? "Guess first number: " : "Guess another number: ");
                     int userInput = int.Parse(Console.ReadLine());
 
 
@@ -65,13 +64,8 @@ namespace NumberGuessingGame
                         guessedNumbers.Add(userInput);
                     }
 
-
-
                 } while (!isCorrect);
             }
-
-
-
         }
 
         static int GetRandomNumbers()
@@ -92,7 +86,6 @@ namespace NumberGuessingGame
             int randomNumber = random.Next(interval[0], interval[1]);
 
             return randomNumber;
-
 
         }
 
